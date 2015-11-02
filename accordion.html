@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Accordion</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <style>
+        h2 {
+            border: 1px solid black;
+            padding-left: 20px;
+            border-radius: 10px;
+            background-color: #298975;
+            color: white;
+            font-family: sans-serif;
+            cursor: pointer;
+            
+        }
+        
+        div {
+            max-width: 400px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .pressed {
+            background: #9AA939;
+            border-bottom-right-radius: 0;
+            border-bottom-left-radius: 0;
+        }
+        
+        i {
+            color: #0F5442;
+        }
+        
+</style>
+    
+    <script src="jquery-2.1.4.min.js" type="text/javascript"></script>
+    <script>
+        $(document).ready(function(){
+            $("p").css({"display": "none"});
+            
+            $("#h1").click(function(){
+            $("#p1").animate({
+            height: 'toggle'
+        });
+                
+            $("#h1").toggleClass("pressed");
+            $("#i1").toggleClass("fa fa-plus-circle fa fa-minus-circle");
+    });
+            
+            
+            
+            
+            $("#h2").click(function(){
+            $("#p2").animate({
+            height: 'toggle'
+        });
+            $("#h2").toggleClass("pressed");
+            $("#i2").toggleClass("fa fa-plus-circle fa fa-minus-circle");
+    });
+            $("#h3").click(function(){
+            $("#p3").animate({
+            height: 'toggle'
+        });
+            $("#h3").toggleClass("pressed");
+            $("#i3").toggleClass("fa fa-plus-circle fa fa-minus-circle");
+    });
+        
+        
+        
+});
+        
+        
+    </script>
+</head>
+<body>
+    
+    
+    <div>
+        <h2 id="h1" class=""><i class="fa fa-plus-circle" id="i1"></i> Lexus</h2>
+        <p id="p1">Lexus is the luxury vehicle division of Japanese automaker Toyota. The Lexus marque is marketed in over 70 countries and territories worldwide, has become Japan's largest-selling make of premium cars, and has ranked among the ten largest Japanese global brands in market value.</p>
+        
+        <h2 id="h2"><i class="fa fa-plus-circle" id="i2"></i> Toyota</h2>
+        
+        <p id="p2">Toyota Motor Corporation is a Japanese automotive manufacturer headquartered in Toyota, Aichi, Japan.</p>
+        
+        <h2 id="h3"><i class="fa fa-plus-circle" id="i3"></i> Nissan</h2>
+        
+        <p id="p3">Nissan Motor Company Ltd, usually shortened to Nissan, is a Japanese multinational automobile manufacturer headquartered in Nishi-ku, Yokohama, Japan</p>
+    </div>
+    
+    
+    
+    
+</body>
+</html>
